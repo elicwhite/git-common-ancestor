@@ -7,14 +7,14 @@ node_js:
 notifications:
   email: false
 before_install:
-  - git fetch origin master:master
-  - git fetch origin branch-for-testing:branch-for-testing
+- git fetch origin master:master
+- git fetch origin branch-for-testing:branch-for-testing
 deploy:
   provider: npm
   email: npm@eli-white.com
   api_key:
-    secure: bedISZTP0AQSSCUjq7TBFI7iRf6Y96vmsTWDp6WT6lOAO41EiUYZH4WF+3vIm+7u8rAFfXfgEtdDDXXuzxokJI5tMhb6ouk7eHlMme1/XI/P0pEfuv81dcUYWR3XF6ftMvk83Wreyp7+XOCUhX+SMiZnH5D0fL46nQToUaMvuJqH+29OEI0GtpYh4djySRaMuhPono3z1oxK4S5ghLKmNHuIXwBz3F/9qKWuKrazjzlewqbZUdru6but/oWAXjBImlQvQJfI/Z7csiQ7eCgjL2w9w2t8sTCUj1AzCHvt3K+T2FyN0tpl+/tGad6Fltv3itgKSNU8ijZ/Q1WqHAjoOrzDQFxZ6gotoWlYNx+/Okm3p9ZLYwC98leN3nPzLYqgYcPxfFnQtLyd526W8ukR8D2gwXSjDHeXk4O+86EpJ/YSVRh5BfAYuC4XXbZr1WIKVCseRyv9IYSQB8JfCDvUY/XkdSJXdyXw8oJzoIATbzZNvmme80ROt2K+P8kmd/Z6E/yiQ1IArQjGKsb0VXPf0JgIINbQ2BCz0dk+ZG1SUbvm7vbMvBXgCcsndeZaKTQq1f0lhckGHURlx1DqEgRhjMegnHKhrirSP5iZY5YGLok5CeJCfeQrZI1YAmk82bSR0vj4kxYLCNgmvdCBexcqqt1hld9hYZfI//PXwEmaTok=
+    secure: I0WjgrsIskIL9MSS+h27t3Twztyo2afLK6g7btVWcle4b4At0bOpoUzjSVx8mXojdle6X3PkxJc0D4QwOHHtNIYeGdyU0mgRBapN7ECdPZrZmoowM9VqVvyzZDe7E6Pp1lgEMwPeNAyTmZo+3FeCiwIlWPQ0Y2AyAeYNEMaAs5YQx6Bz6VoIBCma1Ee+8HIaky/fxZsXFHad+VTuqu4RZuRBSkxZcPwaZaL8qyERlx+WMupvdwFm50qm8KUU+QoDCRAMjAMO0kgCrRd9rTmoTAo6AbeEx93ibJMVaSg/vjc/1Cokvnts0foSzGdeLAOmwnps+S+AodOgUo/jnryiBbjhzdqoFcxVmr0BMDZZf3fNfk/PtzIsK+IT75NwraFZqRsA5LWNuYUl/+Wc0/G5g6Ze1VPBYnMiWg1182RsdNzuf4YZXgKsYyocNycsjzGLT2MSKPmTfIcz38mzoEXF9icQQY8N9U1tt6z7IhOrABX65L8RlLUE2kNjkq4gZNG8edrSTXrWVIcO2r31hDUkh85M5xEf7OHPX1IoPlqJq1q9Bh5AZUbCQ8a5nL1w8zNfYzrk+1Nd2Ibnl7CAalYBR6OXLRkknFFPGraMr3vF6P7s6S1KVcwA6qDFcGNfPuUb8OzYrvXPVaPq1lbC/I6MSJ92mG8AIUZdu7KnczdAtKA=
   on:
     tags: true
     repo: TheSavior/git-common-ancestor
-    node: 'node'
+    node: node
