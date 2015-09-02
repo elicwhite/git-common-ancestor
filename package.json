@@ -1,0 +1,19 @@
+{
+  "name": "git-common-ancestor",
+  "version": "1.0.0",
+  "description": "Get the common ancestor of a sha and a branch",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSavior/git-common-ancestor.git"
+  },
+  "author": "Eli White <github@eli-white.com> (http://eli-white.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TheSavior/git-common-ancestor/issues"
+  },
+  "homepage": "https://github.com/TheSavior/git-common-ancestor#readme"
+}

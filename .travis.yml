@@ -1,0 +1,17 @@
+language: node_js
+script: npm test
+node_js:
+- node
+- io.js
+- '0.12'
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: npm@eli-white.com
+  api_key:
+    secure: bedISZTP0AQSSCUjq7TBFI7iRf6Y96vmsTWDp6WT6lOAO41EiUYZH4WF+3vIm+7u8rAFfXfgEtdDDXXuzxokJI5tMhb6ouk7eHlMme1/XI/P0pEfuv81dcUYWR3XF6ftMvk83Wreyp7+XOCUhX+SMiZnH5D0fL46nQToUaMvuJqH+29OEI0GtpYh4djySRaMuhPono3z1oxK4S5ghLKmNHuIXwBz3F/9qKWuKrazjzlewqbZUdru6but/oWAXjBImlQvQJfI/Z7csiQ7eCgjL2w9w2t8sTCUj1AzCHvt3K+T2FyN0tpl+/tGad6Fltv3itgKSNU8ijZ/Q1WqHAjoOrzDQFxZ6gotoWlYNx+/Okm3p9ZLYwC98leN3nPzLYqgYcPxfFnQtLyd526W8ukR8D2gwXSjDHeXk4O+86EpJ/YSVRh5BfAYuC4XXbZr1WIKVCseRyv9IYSQB8JfCDvUY/XkdSJXdyXw8oJzoIATbzZNvmme80ROt2K+P8kmd/Z6E/yiQ1IArQjGKsb0VXPf0JgIINbQ2BCz0dk+ZG1SUbvm7vbMvBXgCcsndeZaKTQq1f0lhckGHURlx1DqEgRhjMegnHKhrirSP5iZY5YGLok5CeJCfeQrZI1YAmk82bSR0vj4kxYLCNgmvdCBexcqqt1hld9hYZfI//PXwEmaTok=
+  on:
+    tags: true
+    repo: TheSavior/git-common-ancestor
+    node: 'node'
