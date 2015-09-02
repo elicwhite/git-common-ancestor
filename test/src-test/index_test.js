@@ -6,8 +6,6 @@ var gitCommonAncestor = require('../../');
 describe('module/index', function() {
   describe('#ofShaAndBranch', function() {
     it('should return branching point', function() {
-      this.timeout(50000);
-
       var sha = '92ce1d58080270ffc87b63a90cba18866f29ba9f';
       var branch = 'master';
       var expected = 'f7d7655f237486d52e8b71a8bb701e63121bec9b';
@@ -15,6 +13,26 @@ describe('module/index', function() {
       return gitCommonAncestor.ofShaAndBranch(sha, branch)
       .then(function(result) {
         assert.strictEqual(result, expected);
+      });
+    });
+  });
+
+  describe('#getShaHistory', function() {
+    var getShaHistory;
+
+    beforeEach(function() {
+      getShaHistory = gitCommonAncestor.__get__('getShaHistory');
+    });
+
+    it('should return expected', function() {
+      var expected = [
+        '92ce1d58080270ffc87b63a90cba18866f29ba9f',
+        'f7d7655f237486d52e8b71a8bb701e63121bec9b'
+      ];
+
+      return getShaHistory('92ce1d58080270ffc87b63a90cba18866f29ba9f')
+      .then(function(result) {
+        assert.deepEqual(result, expected);
       });
     });
   });
