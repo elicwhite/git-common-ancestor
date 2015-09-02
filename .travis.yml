@@ -6,6 +6,8 @@ node_js:
 - '0.12'
 notifications:
   email: false
+before_install:
+  - git fetch origin master:master
 deploy:
   provider: npm
   email: npm@eli-white.com
