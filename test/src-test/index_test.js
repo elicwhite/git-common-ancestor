@@ -37,6 +37,27 @@ describe('module/index', function() {
     });
   });
 
+  describe('#getBranchHistory', function() {
+    var getBranchHistory;
+
+    beforeEach(function() {
+      getBranchHistory = gitCommonAncestor.__get__('getBranchHistory');
+    });
+
+    it('should return expected', function() {
+      var expected = [
+        '8379add59b1c2450c3a67157bdb7b3002dfc6ecf',
+        'b8dd3cee9c81ad85600c559a9e0c933646023792',
+        'f7d7655f237486d52e8b71a8bb701e63121bec9b'
+      ];
+
+      return getBranchHistory('8379add59b1c2450c3a67157bdb7b3002dfc6ecf')
+      .then(function(result) {
+        assert.deepEqual(result, expected);
+      });
+    });
+  });
+
   describe('#getLastCommonSha', function() {
     var getLastCommonSha;
 

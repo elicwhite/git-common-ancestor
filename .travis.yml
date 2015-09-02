@@ -8,6 +8,7 @@ notifications:
   email: false
 before_install:
   - git fetch origin master:master
+  - git fetch origin branch-for-testing:branch-for-testing
 deploy:
   provider: npm
   email: npm@eli-white.com
