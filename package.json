@@ -4,7 +4,7 @@
   "description": "Get the common ancestor of a sha and a branch",
   "main": "lib/index.js",
   "scripts": {
-    "test": ""
+    "test": "eslint . && jscs lib test && mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/TheSavior/git-common-ancestor/issues"
   },
-  "homepage": "https://github.com/TheSavior/git-common-ancestor#readme"
+  "homepage": "https://github.com/TheSavior/git-common-ancestor#readme",
+  "devDependencies": {
+    "chai": "3.2.0",
+    "eslint": "1.3.1",
+    "jscs": "2.1.1",
+    "mocha": "2.3.0",
+    "wealthfront-javascript": "2.3.0"
+  }
 }
