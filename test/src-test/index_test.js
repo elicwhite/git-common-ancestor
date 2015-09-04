@@ -58,41 +58,42 @@ describe('module/index', function() {
     });
   });
 
-  describe('#getLastCommonSha', function() {
-    var getLastCommonSha;
+  describe('#getFirstCommonSha', function() {
+    var getFirstCommonSha;
 
     beforeEach(function() {
-      getLastCommonSha = gitCommonAncestor.__get__('getLastCommonSha');
+      getFirstCommonSha = gitCommonAncestor.__get__('getFirstCommonSha');
     });
 
     it('should be null with empty arrays', function() {
-      var result = getLastCommonSha([], []);
+      var result = getFirstCommonSha([], []);
       assert.isNull(result);
     });
 
     it('with one thing in history should be one thing', function() {
-      var result = getLastCommonSha(['a'], ['a']);
+      var result = getFirstCommonSha(['a'], ['a']);
       assert.strictEqual(result, 'a');
     });
 
     it('should be last one that is the same from end', function() {
-      var result = getLastCommonSha(
+      var result = getFirstCommonSha(
         ['a', 'b', 'c'],
         ['d', 'b', 'c']
       );
       assert.strictEqual(result, 'b');
     });
 
-    it('should be null if nothing common', function() {
-      var result = getLastCommonSha(['a', 'b'], ['c', 'd']);
-      assert.isNull(result);
+    it('should be first common sha even with other diffs', function() {
+      var result = getFirstCommonSha(
+        ['a', 'c', 'b', 'f'],
+        ['d', 'b', 'h']
+      );
+      assert.strictEqual(result, 'b');
     });
 
-    it('should be branching point', function() {
-      var history1 = ['0', '1', '2', 'a', 'b', 'c', 'd', 'e'];
-      var history2 = ['f', 'g', 'c', 'd', 'e'];
-      var result = getLastCommonSha(history1, history2);
-      assert.strictEqual(result, 'c');
+    it('should be null if nothing common', function() {
+      var result = getFirstCommonSha(['a', 'b'], ['c', 'd']);
+      assert.isNull(result);
     });
   });
 });
