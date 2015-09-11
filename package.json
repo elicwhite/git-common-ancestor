@@ -4,7 +4,7 @@
   "description": "Get the common ancestor of a sha and a branch",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint . && jscs lib test && mocha"
+    "test": "eslint . && jscs . && mocha"
   },
   "files": [
     "bin",
