@@ -27,3 +27,13 @@ gitCommonAncestor.ofShaAndBranch(sha, 'master')
 
 ```
 
+### #fromBranch(string branch) -> Promise(string sha)
+Calls `ofShaAndBranch` passing in the current sha and diffing against the given branch.
+
+```
+var gitCommonAncestor = require('git-common-ancestor');
+gitCommonAncestor.fromBranch('master')
+.then(function(branchPoint) {
+  // Where the current sha branched from master
+})
+```

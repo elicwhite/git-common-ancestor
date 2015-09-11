@@ -1,9 +1,23 @@
 'use strict';
 
 var assert = require('chai').assert;
-var gitCommonAncestor = require('../../');
+var proxyquire = require('proxyquire');
+var sinon = require('sinon-sandbox');
 
 describe('module/index', function() {
+  var gitCommonAncestor;
+  var longStub;
+
+  beforeEach(function() {
+    longStub = sinon.stub();
+
+    gitCommonAncestor = proxyquire('../../', {
+      'git-rev': {
+        long: longStub
+      }
+    });
+  });
+
   describe('#ofShaAndBranch', function() {
     it('should return branching point', function() {
       var sha = '92ce1d58080270ffc87b63a90cba18866f29ba9f';
@@ -11,6 +25,21 @@ describe('module/index', function() {
       var expected = 'f7d7655f237486d52e8b71a8bb701e63121bec9b';
 
       return gitCommonAncestor.ofShaAndBranch(sha, branch)
+      .then(function(result) {
+        assert.strictEqual(result, expected);
+      });
+    });
+  });
+
+  describe('#fromBranch', function() {
+    it('should call ofShaAndBranch with current git sha', function() {
+      var expected = 'ancestor';
+
+      longStub.callsArgWith(0, 'sha');
+      var ofShaAndBranchStub = sinon.stub(gitCommonAncestor, 'ofShaAndBranch');
+      ofShaAndBranchStub.withArgs('sha', 'master').resolves(expected);
+
+      return gitCommonAncestor.fromBranch('master')
       .then(function(result) {
         assert.strictEqual(result, expected);
       });
