@@ -6,6 +6,9 @@
   "scripts": {
     "test": "eslint . && jscs . && mocha"
   },
+  "bin": {
+    "git-common-ancestor": "./bin/cli.js"
+  },
   "files": [
     "bin",
     "lib"
