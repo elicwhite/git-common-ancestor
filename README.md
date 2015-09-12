@@ -4,6 +4,9 @@
 [![devDependency Status](https://david-dm.org/TheSavior/git-common-ancestor.svg)](https://david-dm.org/TheSavior/git-common-ancestor#info=devDependencies)
 [![devDependency Status](https://david-dm.org/TheSavior/git-common-ancestor/dev-status.svg)](https://david-dm.org/TheSavior/git-common-ancestor#info=devDependencies)
 
+Find the branching point between two points in a git repo. Knowing the branching point is often useful when writing tools that need to look at the changes made on a branch.
+
+For example, if you want to run a linter on all the files that were changed on your branch, you would use this tool to find the point that your branch was created from your main branch and then use `git diff` to find the files changed between those revisions.
 
 ## Installation
 
