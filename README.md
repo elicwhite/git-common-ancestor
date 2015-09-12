@@ -11,7 +11,8 @@
 $ npm install git-common-ancestor --save-dev
 ```
 
-## Usage
+## API Usage
+
 ![Git Graph](/resources/git_graph.png?raw=true)
 
 ### #ofShaAndBranch(string sha, string branch) -> Promise(string sha)
@@ -36,4 +37,14 @@ gitCommonAncestor.fromBranch('master')
 .then(function(branchPoint) {
   // Where the current sha branched from master
 })
+```
+
+## CLI Usage
+
+```bash
+> git-common-ancestor --branch master
+a061416bb6307cd69f155e6a2ebffe75a5be2624
+
+> git-common-ancestor --sha 92ce1d5 --branch master
+f7d7655f237486d52e8b71a8bb701e63121bec9b
 ```

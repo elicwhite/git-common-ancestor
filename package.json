@@ -4,8 +4,12 @@
   "description": "Get the common ancestor of a sha and a branch",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint . && jscs lib test && mocha"
+    "test": "eslint . && jscs . && mocha"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TheSavior/git-common-ancestor.git"
@@ -18,7 +22,8 @@
   "homepage": "https://github.com/TheSavior/git-common-ancestor#readme",
   "dependencies": {
     "es6-promisify": "^3.0.0",
-    "git-rev": "^0.2.1"
+    "git-rev": "^0.2.1",
+    "minimist": "^1.2.0"
   },
   "devDependencies": {
     "chai": "3.2.0",
