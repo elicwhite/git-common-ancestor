@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/TheSavior/git-common-ancestor#readme",
   "dependencies": {
-    "es6-promisify": "^3.0.0",
     "git-rev": "^0.2.1",
     "minimist": "^1.2.0"
   },
