@@ -4,10 +4,10 @@
 
 'use strict';
 
-var minimist = require('minimist');
-var gitCommonAncestor = require('../');
+const minimist = require('minimist');
+const gitCommonAncestor = require('../');
 
-var argv = minimist(process.argv.slice(2));
+const argv = minimist(process.argv.slice(2));
 
 if (!argv.branch) {
   console.log('--branch is required');

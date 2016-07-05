@@ -4,10 +4,10 @@
 
 process.env.NODE_ENV = 'test';
 
-var chai = require('chai');
+const chai = require('chai');
 chai.config.includeStack = true;
 
-var sinon = require('sinon');
+const sinon = require('sinon');
 require('sinon-as-promised');
 sinon.assert.expose(chai.assert, {
   prefix: ''
@@ -15,9 +15,9 @@ sinon.assert.expose(chai.assert, {
 
 global.assert = chai.assert;
 
-var sinonSandbox = require('sinon-sandbox');
+const sinonSandbox = require('sinon-sandbox');
 
-afterEach(function() {
+afterEach(() => {
   if (sinonSandbox.clock) {
     sinonSandbox.clock.restore();
   }
