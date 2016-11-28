@@ -16,12 +16,12 @@ if (!argv.branch) {
 
 if (argv.sha) {
   gitCommonAncestor.ofShaAndBranch(argv.sha, argv.branch)
-  .then(reporter)
-  .catch(error);
+    .then(reporter)
+    .catch(error);
 } else {
   gitCommonAncestor.fromBranch(argv.branch)
-  .then(reporter)
-  .catch(error);
+    .then(reporter)
+    .catch(error);
 }
 
 function reporter(output) {

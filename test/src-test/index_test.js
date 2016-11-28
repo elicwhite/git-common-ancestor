@@ -25,9 +25,9 @@ describe('module/index', () => {
       const expected = 'f7d7655f237486d52e8b71a8bb701e63121bec9b';
 
       return gitCommonAncestor.ofShaAndBranch(sha, branch)
-      .then(result => {
-        assert.strictEqual(result, expected);
-      });
+        .then(result => {
+          assert.strictEqual(result, expected);
+        });
     });
   });
 
@@ -40,9 +40,9 @@ describe('module/index', () => {
       ofShaAndBranchStub.withArgs('sha', 'master').resolves(expected);
 
       return gitCommonAncestor.fromBranch('master')
-      .then(result => {
-        assert.strictEqual(result, expected);
-      });
+        .then(result => {
+          assert.strictEqual(result, expected);
+        });
     });
   });
 
@@ -60,9 +60,9 @@ describe('module/index', () => {
       ];
 
       return getShaHistory('92ce1d58080270ffc87b63a90cba18866f29ba9f')
-      .then(result => {
-        assert.deepEqual(result, expected);
-      });
+        .then(result => {
+          assert.deepEqual(result, expected);
+        });
     });
   });
 
@@ -81,9 +81,9 @@ describe('module/index', () => {
       ];
 
       return getBranchHistory('8379add59b1c2450c3a67157bdb7b3002dfc6ecf')
-      .then(result => {
-        assert.deepEqual(result, expected);
-      });
+        .then(result => {
+          assert.deepEqual(result, expected);
+        });
     });
   });
 
