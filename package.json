@@ -28,7 +28,7 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.1.2",
     "eslint": "^3.0.0",
     "jscs": "^3.0.6",
     "mocha": "^3.0.1",
