@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "eslint": "^3.0.0",
+    "eslint": "^4.18.0",
     "jscs": "^3.0.6",
     "mocha": "^3.0.1",
     "proxyquire": "^1.7.10",
