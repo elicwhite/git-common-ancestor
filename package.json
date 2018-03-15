@@ -35,7 +35,7 @@
     "proxyquire": "^1.7.10",
     "rewire": "^2.5.2",
     "rewire-global": "^1.0.11",
-    "sinon": "^1.17.4",
+    "sinon": "^4.4.6",
     "sinon-as-promised": "4.0.2",
     "sinon-sandbox": "1.0.2",
     "wealthfront-javascript": "^4.0.0"
