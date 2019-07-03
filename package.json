@@ -38,6 +38,6 @@
     "sinon": "^1.17.4",
     "sinon-as-promised": "4.0.2",
     "sinon-sandbox": "1.0.2",
-    "wealthfront-javascript": "^4.0.0"
+    "wealthfront-javascript": "^5.0.1"
   }
 }
